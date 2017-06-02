@@ -153,8 +153,6 @@ class WeiboSpider(scrapy.Spider):
                 # time.sleep(random.uniform(10, 21))
 
                 yield Request(url, callback=self.get_count, headers=headers)
-                # j = j + 1
-                # print(content['cards'][0]['card_group'][0]['scheme'])
         pass
 
 
