@@ -108,7 +108,7 @@ class WeiboSpider(scrapy.Spider):
                 item['followers_count'] = content['userInfo']['followers_count']
 
             finally:
-                print(item)
+                # print(item)
                 yield (item)
 
                 page_count = 0
