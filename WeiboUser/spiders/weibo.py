@@ -110,9 +110,8 @@ class WeiboSpider(scrapy.Spider):
             finally:
                 # print(item)
                 yield (item)
-
                 page_count = 0
-                # if int(item['follow_count']) > 0:
+
                 if int(item['follow_count']) > 200:
                     page_count = 10
                 else:
