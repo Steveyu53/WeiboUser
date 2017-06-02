@@ -52,9 +52,9 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-   'WeiboUser.pymiddlewares.ProxyMiddleware':1
-}
+# DOWNLOADER_MIDDLEWARES = {
+#    'WeiboUser.pymiddlewares.ProxyMiddleware':1
+# }
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -62,9 +62,9 @@ DOWNLOADER_MIDDLEWARES = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
-PROXIES = [
-    '123.207.15.179:8888'
-]
+# PROXIES = [
+#     '123.207.15.179:8888'
+# ]
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html

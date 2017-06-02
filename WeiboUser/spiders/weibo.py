@@ -157,23 +157,5 @@ class WeiboSpider(scrapy.Spider):
                 # print(content['cards'][0]['card_group'][0]['scheme'])
         pass
 
-    # def get_count2(self,response):
-    #
-    #         content = json.loads(response.text)
-    #         verified = content['userInfo']['verified']
-    #
-    #         print("people count2" + str(content))
-    #
-    #         if verified is True:
-    #             item = WeibouserItem()
-    #
-    #             uid = content['userInfo']['id']
-    #
-    #             item['screen_name'] = content['userInfo']['screen_name']
-    #             item['verified_reason'] = content['userInfo']['verified_reason']
-    #             item['follow_count'] = content['userInfo']['follow_count']
-    #             item['followers_count'] = content['userInfo']['followers_count']
-    #
-    #             yield(item)
 
 
