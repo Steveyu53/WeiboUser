@@ -18,4 +18,6 @@ class WeibouserItem(scrapy.Item):
 
     followers_count = scrapy.Field()
 
+    # h_ip = scrapy.Field()
+
     pass

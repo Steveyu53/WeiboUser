@@ -6,6 +6,7 @@ import time
 import random
 
 from scrapy.http import Request
+# from scrapy_redis.spiders import RedisSpider
 from WeiboUser.items import WeibouserItem
 
 
@@ -103,10 +104,10 @@ class WeiboSpider(scrapy.Spider):
 
             try:
                 item['screen_name'] = content['userInfo']['screen_name']
-                item['verified_reason'] = content['userInfo']['verified_reason']
+                item['verified_reason'] = content['userInfo']['verified_reason'] + ' win10'
                 item['follow_count'] = content['userInfo']['follow_count']
                 item['followers_count'] = content['userInfo']['followers_count']
-
+                # item['h_ip'] = 'win10'
             finally:
                 yield (item)
                 page_count = 0
@@ -138,7 +139,7 @@ class WeiboSpider(scrapy.Spider):
         content = json.loads(response.text)
         print('url ' + response.url)
 
-        if 'cards' in content.keys():
+        if 'cards' in content.keys() and 'card_group' in content['cards'][0].keys():
             itemcount = len(content['cards'][0]['card_group'])
 
             for i in range(0, itemcount):
